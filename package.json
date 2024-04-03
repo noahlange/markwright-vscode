@@ -28,8 +28,8 @@
         "category": "Markwright"
       },
       {
-        "command": "markwright.export",
-        "title": "Generate a PDF from the working directory.",
+        "command": "markwright.exportHTML",
+        "title": "Generate HTML output for the working directory.",
         "category": "Markwright"
       }
     ]
@@ -61,7 +61,7 @@
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "normalize.css": "^8.0.1",
-    "pagedjs": "^0.4.3",
+    "pagedjs": "^0.5.0-beta.1",
     "postcss": "^8.4.16",
     "postcss-nesting": "^10.1.10",
     "postcss-scss": "^4.0.4",

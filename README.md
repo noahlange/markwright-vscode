@@ -20,6 +20,7 @@ A VSCode plugin for quick-and-dirty typesetting using Markdown, CSS and [PagedJS
 - scroll + zoom + pan
 - non-facing page layouts
 - PDF export
+- configuration
 
 ## Implementation details
 

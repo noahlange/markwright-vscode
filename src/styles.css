@@ -4,6 +4,7 @@
   margin: 0 0 0 auto;
   grid-column: 1;
 }
+
 .pagedjs_right_page {
   margin: 0 auto 0 0;
   grid-column: 2;

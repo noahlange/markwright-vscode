@@ -23,6 +23,10 @@ export class MarkwrightPanel {
   public static readonly view = 'markwright';
   public static readonly channel = vscode.window.createOutputChannel('markwright');
 
+  public get workspace() {
+    return vscode.workspace.name;
+  }
+
   private readonly _panel: vscode.WebviewPanel;
   private readonly _extensionUri: Uri;
   private readonly _md: MarkdownService;
@@ -83,7 +87,7 @@ export class MarkwrightPanel {
     }
   }
 
-  public async exportPDF(filename: string): Promise<void> {
+  public async exportHTML(filename: string): Promise<void> {
     this._panel.webview.postMessage({ type: 'export', filename });
     this._panel.webview.onDidReceiveMessage(async message => {
       switch (message.command) {

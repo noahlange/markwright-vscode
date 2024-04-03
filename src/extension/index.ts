@@ -7,11 +7,11 @@ import { commands, window } from 'vscode';
 
 import { MarkwrightPanel } from './MarkwrightPanel';
 import { getWebviewOptions } from '../utils/webview';
-import { exportPDF, open } from '../commands';
+import { exportHTML, open } from '../commands';
 
 export function activate(context: ExtensionContext): void {
   context.subscriptions.push(
-    commands.registerCommand('markwright.export', exportPDF(context)),
+    commands.registerCommand('markwright.exportHTML', exportHTML(context)),
     commands.registerCommand('markwright.open', open(context)),
     workspace.onDidSaveTextDocument(() => MarkwrightPanel.current?.updateContent()),
     window.onDidChangeActiveTextEditor(e =>
