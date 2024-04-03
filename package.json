@@ -1,0 +1,76 @@
+{
+  "name": "markwright",
+  "description": "Dead-simple desktop publishing with Markdown and CSS.",
+  "version": "0.0.1",
+  "publisher": "noahlange",
+  "private": true,
+  "icon": "icon-128px.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/vscode-extension-samples"
+  },
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onWebviewPanel:markwright"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markwright.open",
+        "title": "Open the working directory as a Markwright document.",
+        "category": "Markwright"
+      },
+      {
+        "command": "markwright.export",
+        "title": "Generate a PDF from the working directory.",
+        "category": "Markwright"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node build",
+    "build": "node build",
+    "dev:lint": "eslint --fix './src/**/*.{ts,tsx}'",
+    "dev:pretty": "prettier --write 'src/**/*'",
+    "dev:types": "tsc --noEmit",
+    "dev:bundle": "vsce package"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.47.0",
+    "@types/vscode-webview": "^1.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "esbuild": "^0.15.5",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "normalize.css": "^8.0.1",
+    "pagedjs": "^0.3.5",
+    "postcss": "^8.4.16",
+    "postcss-nesting": "^10.1.10",
+    "postcss-scss": "^4.0.4",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.2",
+    "vsce": "^2.11.0"
+  },
+  "dependencies": {
+    "dom-minimap": "^1.7.5",
+    "pdfjs": "^2.5.0"
+  }
+}
