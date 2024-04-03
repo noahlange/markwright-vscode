@@ -11,6 +11,14 @@ A VSCode plugin for quick-and-dirty typesetting using Markdown, CSS and [PagedJS
 - <kbd>npm i && npm run dev:bundle</kbd>
 - (open Command Palette, install from vsix)
 
+## Roadmap
+
+- actual distribution
+- minimap navigation
+- scroll + zoom + pan
+- non-facing page layouts
+- PDF export
+
 ## Implementation details
 
 ### Content & Styles

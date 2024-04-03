@@ -61,15 +61,11 @@
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "normalize.css": "^8.0.1",
-    "pagedjs": "^0.3.5",
+    "pagedjs": "^0.4.3",
     "postcss": "^8.4.16",
     "postcss-nesting": "^10.1.10",
     "postcss-scss": "^4.0.4",
-    "prettier": "^2.7.1",
+    "prettier": "^3.2.5",
     "typescript": "^4.7.2"
-  },
-  "dependencies": {
-    "dom-minimap": "^1.7.5",
-    "pdfjs": "^2.5.0"
   }
 }
