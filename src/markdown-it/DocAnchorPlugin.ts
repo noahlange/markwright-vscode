@@ -1,5 +1,9 @@
 import type MarkdownIt from 'markdown-it';
 
+/**
+ * This pairs documents to their corresponding place in the HTML output, allowing us to
+ * do the smooth-scroll-on-file-open thing.
+ */
 export function docAnchorPlugin(md: MarkdownIt): MarkdownIt {
   const oldRule = md.renderer.rules.heading_open;
   md.renderer.rules.heading_open = (tokens, i, options, env, renderer) => {

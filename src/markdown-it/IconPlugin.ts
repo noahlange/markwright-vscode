@@ -29,6 +29,10 @@ const splitTextToken = (text: string, Tok: typeof Token): Token[] => {
   return nodes;
 };
 
+/**
+ * A MarkdownIt plugin that turns `:icon:` into `<i class="icon"></i>`. This is normally reserved for emojis,
+ * a list of which I guess we could cross-check against, but I don't mind using the actual unicode emojis.
+ */
 export function iconPlugin(md: MarkdownIt): MarkdownIt {
   md.renderer.rules.icon = (token, i): string => `<i class="${token[i].content}"></i>`;
 

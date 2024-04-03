@@ -1,5 +1,5 @@
+import type { ExtensionContext } from 'vscode';
 import { window } from 'vscode';
-import { ExtensionContext } from 'vscode';
 import { MarkwrightPanel } from '../extension/MarkwrightPanel';
 
 export function exportPDF(context: ExtensionContext) {

@@ -36,15 +36,14 @@ window.addEventListener(
         return view.render(e.data);
       }
       case 'export': {
-        const heads = Array.from(document.querySelectorAll(`head *:not(script)`));
-        const bodies = Array.from(document.querySelectorAll(`body *:not(script)`));
-
-        const head = heads.reduce((a, b) => a + b.outerHTML, '');
-        const body = bodies.reduce((a, b) => a + b.outerHTML, '');
+        const html = [
+          ...Array.from(document.querySelectorAll(`head *:not(script)`), e => e.outerHTML),
+          ...Array.from(document.querySelectorAll(`body *:not(script)`), e => e.outerHTML)
+        ].join('');
 
         vscode.postMessage({
           command: 'export.content',
-          content: `<html>${head}${body}</html>`.replaceAll('&quot;', '')
+          content: `<html>${html}</html>`.replaceAll('&quot;', '')
         });
       }
     }

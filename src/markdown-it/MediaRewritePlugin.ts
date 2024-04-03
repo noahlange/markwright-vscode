@@ -5,6 +5,10 @@ interface MediaRewritePluginOptions {
   toResourceUri: (base: Uri, path: string) => string;
 }
 
+/**
+ * The markdown version of the media rewriter. Embedded content needs to be rewritten using a VSCode
+ * resource URI or it won't be displayed due to security concerns.
+ */
 export function mediaRewritePlugin(md: MarkdownIt, o: MediaRewritePluginOptions): MarkdownIt {
   const old = md.renderer.rules.image!;
   md.renderer.rules.image = (tokens, i, options, env, md) => {

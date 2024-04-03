@@ -17,7 +17,12 @@ export class Viewer {
     const next = document.createElement('div');
     next.innerHTML = await this.renderer.render(data.html ?? '', data.css ?? '');
 
-    this.node !== null ? this.root.replaceChild(next, this.node) : this.root.appendChild(next);
+    if (this.node) {
+      this.root.replaceChild(next, this.node);
+    } else {
+      this.root.appendChild(next);
+    }
+
     this.node = next;
     this.resize();
   }

@@ -1,3 +1,6 @@
+/**
+ * Throttle an arbitrary function so that it's called only on RAF.
+ */
 export function throttleRAF<T extends (...args: unknown[]) => unknown>(
   fn: T
 ): (...args: Parameters<T>) => void {

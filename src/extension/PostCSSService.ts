@@ -16,9 +16,7 @@ export class PostCSSService extends Disposable {
   private cached = '';
 
   public constructor(webview: Webview) {
-    super(() => {
-      // this.webview = this.postcss = null!
-    });
+    super(() => (this.webview = this.postcss = null!));
     this.webview = webview;
     this.postcss = postcss([
       PostCSSService.NestingPlugin,
@@ -38,7 +36,7 @@ export class PostCSSService extends Disposable {
       );
       return (this.cached = css.join('\n'));
     } catch (e) {
-      window.showErrorMessage('PostCSS compilation failed.');
+      window.showErrorMessage('PostCSS compilation failed.', (e as Error).toString());
       return this.cached;
     }
   }

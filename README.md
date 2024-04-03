@@ -4,12 +4,21 @@
 
 A VSCode plugin for quick-and-dirty typesetting using Markdown, CSS and [PagedJS](https://pagedjs.org/).
 
-## Content & Styles
+## Installation
+
+- <kbd>git clone https://github.com/noahlange/markwright-vscode.git</kbd>
+- <kbd>cd markwright-vscode</kbd>
+- <kbd>npm i && npm run dev:bundle</kbd>
+- (open Command Palette, install from vsix)
+
+## Implementation details
+
+### Content & Styles
 
 - all markdown (`.md`, `.markdown`) files in the workspace are concatenated in alphabetical order.
 - all CSS (`.css`) files in the workspace are concatenated in alphabetical order.
 
-## Images
+### Images
 
 Image paths are resolved _relative to_ the Markdown or CSS file referencing the image.
 

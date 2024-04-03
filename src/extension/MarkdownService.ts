@@ -1,9 +1,9 @@
 import type { Webview } from 'vscode';
 
+import { Disposable, Uri, workspace as ws } from 'vscode';
 import MarkdownIt from 'markdown-it';
 import sub from 'markdown-it-sub';
 import sup from 'markdown-it-sup';
-import { Disposable, Uri, workspace as ws } from 'vscode';
 
 import { DocumentProcessor } from './DocumentProcessor';
 import { blockPlugin, iconPlugin, mediaRewritePlugin, docAnchorPlugin } from '../markdown-it';
