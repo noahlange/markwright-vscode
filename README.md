@@ -9,7 +9,9 @@ A VSCode plugin for quick-and-dirty typesetting using Markdown, CSS and [PagedJS
 - <kbd>git clone https://github.com/noahlange/markwright-vscode.git</kbd>
 - <kbd>cd markwright-vscode</kbd>
 - <kbd>npm i && npm run dev:bundle</kbd>
-- (open Command Palette, install from vsix)
+- Command Palette
+  - "Extensions: Install from VSIX..."
+  - "Markwright: Open the working directory as a Markwright document."
 
 ## Roadmap
 
