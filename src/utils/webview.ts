@@ -40,6 +40,12 @@ export function getWebviewHTML(uri: Uri, webview: Webview): string {
       </head>
       <body>
         <main id="root"></main>
+        <div id="ui">
+          <vscode-progress-ring id="loading"></vscode-progress-ring>
+          <div id="toolbar">
+            <vscode-button id="toggle-spread" appearance="icon" aria-label="Toggle spread"></vscode-button>
+          </div>
+        </div>
         <script type="module" src="${webview.asWebviewUri(script)}"></script>
       </body>
     </html>

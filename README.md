@@ -18,9 +18,12 @@ A VSCode plugin for quick-and-dirty typesetting using Markdown, CSS and [PagedJS
 - actual distribution
 - minimap navigation
 - scroll + zoom + pan
-- non-facing page layouts
+- baseline grid overlay
 - PDF export
-- configuration
+- `column-count` issues
+- export via UI
+- incremental page rendering
+- ~~facing pages vs. single-page~~
 
 ## Implementation details
 

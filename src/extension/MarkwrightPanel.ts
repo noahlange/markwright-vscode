@@ -113,7 +113,7 @@ export class MarkwrightPanel {
     this.status = RenderStatus.WORKING;
 
     const documents = await vscode.workspace
-      .findFiles('**/*.{md,markdown,css,pcss,postcss}')
+      .findFiles('**/*.{md,markdown,css,pcss,postcss}', '**/node_modules/**')
       .then(files => files.sort((a, b) => a.path.localeCompare(b.path)));
 
     const [html, css] = await Promise.all([

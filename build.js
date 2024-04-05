@@ -9,6 +9,7 @@ const configs = [
     jsx: 'automatic',
     target: ['es2020'],
     bundle: true,
+    loader: { '.svg': 'text' },
     minify: true
   },
   {

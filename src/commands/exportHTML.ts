@@ -5,9 +5,7 @@ import { MarkwrightPanel } from '../extension/MarkwrightPanel';
 export function exportHTML(context: ExtensionContext) {
   return async () => {
     const filename = await window.showInputBox({
-      value: MarkwrightPanel.current
-        ? `${MarkwrightPanel.current.workspace}.html`
-        : ''
+      value: MarkwrightPanel.current ? `${MarkwrightPanel.current.workspace}.html` : ''
     });
     if (filename) {
       if (!MarkwrightPanel.current) {

@@ -102,3 +102,8 @@ declare module 'pagedjs' {
     protected removeStyles(): void;
   }
 }
+
+declare module '*.svg' {
+  const content: string;
+  export default content;
+}

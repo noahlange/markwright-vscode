@@ -1,18 +1,48 @@
 @import 'normalize.css';
 
-.pagedjs_left_page {
-  margin: 0 0 0 auto;
-  grid-column: 1;
+.layout-sheet {
+  padding: 1.5rem 0;
+  width: 100vw;
+
+  .pagedjs_pages {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
 }
 
-.pagedjs_right_page {
-  margin: 0 auto 0 0;
-  grid-column: 2;
+.layout-spread {
+  padding: 1.5rem 0;
+  width: 100vw;
+
+  .pagedjs_pages {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .pagedjs_left_page {
+    margin: 0 0 0 auto;
+    grid-column: 1;
+  }
+
+  .pagedjs_right_page {
+    margin: 0 auto 0 0;
+    grid-column: 2;
+  }
 }
 
-.pagedjs_pages {
-  padding: 0.75rem 0;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+#ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#toolbar {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
 }
